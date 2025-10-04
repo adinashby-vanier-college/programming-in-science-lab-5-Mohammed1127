@@ -1,6 +1,40 @@
-bin/
-.DS_Store
-build/
-.gradle/
-__pycache__/
-.pytest_cache/
+def hollow_square(n):
+    for result in range(1,int(n+1),1):
+        if result == 1 or result == n:
+            print(int(n)*"*")
+        else:
+            print("*" + " " * (n-2) + "*")
+    return result
+
+def number_pattern(n):
+    i = 1
+    result = ""
+    while i <= n:
+        j = 1
+        while j <= i:
+            result += str(j)
+            j += 1
+        if i != n:
+            result += "\n"
+        i += 1
+    return result
+
+
+def sum_of_natural_numbers(n):
+    total = 0
+    i = 1
+    while i <= n:
+        total += i
+        i += 1
+    return total
+
+
+def centered_star_pyramid(n):
+    w=1
+    result=1
+    while result < n:
+        print((n-result)*" ", (w)*"*")
+        result+=1
+        w+=2
+    return result
+    
